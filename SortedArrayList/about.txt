@@ -1,0 +1,13 @@
+--------------------------------------------------------------------
+|                                                                  |
+|     SORTED ARRAY BASED LIST                                      |
+|                                                                  |
+|     By Daniel Ball:                                              |
+|     daniel.s.ball@gmail.com                                      |
+|     CSC-161, Spring 2013                                         |
+|                                                                  |
+--------------------------------------------------------------------
+|    Creates an array based list, allows user to add, remove,      |
+|    find, display number of, and list contents. Extends           |
+|    array size when current array limit is reached.               |
+--------------------------------------------------------------------
