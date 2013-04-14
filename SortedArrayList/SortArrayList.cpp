@@ -1,4 +1,4 @@
-//------------------------------------SortArrayList.cpp
+//------------------------------------SortArrayList.cpp---------------------------------------
 
 #include "SortArrayList.h"
 
@@ -22,6 +22,7 @@ SortArrayList::SortArrayList()
 	numEntries = 0;
 }
 
+//sorts the list in ascending order by key value
 void SortArrayList::sort()
 {
 	ArrayEntry temp;
@@ -106,16 +107,19 @@ SortArrayList& SortArrayList::operator+=(ArrayEntry* tempEntry)
 	return *this;
 }
 
+//Gets and returns number of items in list
 int SortArrayList::getCount()
 {
 	return numEntries;
 }
 
+//Sets number of items in list to 0
 void SortArrayList::emptyList()
 {
 	numEntries = 0;
 }
 
+//finds an item in the list by key (a) value
 int SortArrayList::findEntry(int findMe)
 {
 	unsigned int min = 0;
@@ -148,7 +152,7 @@ int SortArrayList::findEntry(int findMe)
 void SortArrayList::remSort(int delMe)
 {
 	unsigned int n = findEntry(delMe);
-	if(!n)
+	if(n == -1)
 	{
 		cout<<"That entry doesn't exist!";
 	}
@@ -201,9 +205,9 @@ ostream& operator<<(ostream& outStream , const SortArrayList& inQueue)
 	return outStream;
 }
 
+//de-allocates dynamically allocated memory
 SortArrayList::~SortArrayList()
 {
-	//de-allocates dynamically allocated memory
 	cout<<"Releasing reserved memory...\n";
 	delete[] workingArray;
 	cout<<"Complete.\n";
